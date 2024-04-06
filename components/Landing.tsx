@@ -1,7 +1,7 @@
 "use client"
-import React, { Suspense } from 'react'
+import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Html, useProgress } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/web'
 import Overlay from './Overlay'
@@ -13,7 +13,7 @@ export default function App() {
   const [{ background, fill }, set] = useSpring({ background: '#f0f0f0', fill: '#202020' }, [])
   return (
     <a.main style={{ backgroundColor: background as any }} className="w-screen">
-      <div style={{ height: "50vh", width: '100vw' }}>
+      <div style={{ height: "70vh", width: '100vw' }}>
         <Canvas dpr={[1, 2]}>
           <Scene setBg={set} />
           <OrbitControls enablePan={false} enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />

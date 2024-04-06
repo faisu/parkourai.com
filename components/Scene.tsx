@@ -62,8 +62,8 @@ export default function Scene({ setBg }) {
     return (
         <>
             <PerspectiveCamera makeDefault position={[0, 0, 4]} fov={75}>
-                <a.ambientLight intensity={ambient} />
-                <a.pointLight ref={light} position-z={-15} intensity={env} color="#F8C069" />
+                <a.ambientLight intensity={ambient as any} />
+                <a.pointLight ref={light} position-z={-15} intensity={env as any} color="#F8C069" />
             </PerspectiveCamera>
             <Suspense fallback={<Loader />}>
                 <mesh
